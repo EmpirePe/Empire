@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Empire Investment Courses - Learn how to trade, invest, and build your crypto portfolio." />
+  <meta name="keywords" content="courses, trading, investment, crypto, crypto portfolio, learn investing" />
+  <meta name="author" content="Jason-Lee" />
+  <title>Empire Investment - Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: #fff;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    canvas#candlestick-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+    }
+
+    header {
+      background-color: #000;
+      padding: 1rem 2rem;
+      color: #ffd700;
+      text-align: center;
+    }
+
+    header .logo {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .course-section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .course-section h2 {
+      font-size: 2.5rem;
+      color: #ffd700;
+      margin-bottom: 2rem;
+    }
+
+    .course-card-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .course-card {
+      background-color: #222;
+      border: 1px solid #ffd700;
+      border-radius: 8px;
+      padding: 2rem;
+      width: 30%;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+    }
+
+    .course-card h3 {
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-top: 1rem;
+    }
+
+    .course-card p {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .course-price {
+      font-size: 1.5rem;
+      color: #ffd700;
+      margin-top: 1rem;
+    }
+
+    .cta-btn {
+      background-color: #ffd700;
+      color: #000;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .offer-card {
+      background-color: #444;
+      border: 1px solid #ffd700;
+      border-radius: 8px;
+      padding: 2rem;
+      width: 100%;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .offer-card h3 {
+      font-size: 2rem;
+      color: #ffd700;
+    }
+
+    footer {
+      background-color: #000;
+      color: #ffd700;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    footer .social-links a {
+      color: #ffd700;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer .social-links a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .course-card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .course-card {
+        width: 80%;
+        margin-bottom: 2rem;
+      }
+
+      .offer-card {
+        width: 80%;
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas Background -->
+  <canvas id="candlestick-bg"></canvas>
+
+  <header>
+    <div class="logo">Empire Investment</div>
+  </header>
+
+  <section class="course-section">
+    <h2>Our Courses</h2>
+    <p>Learn how to trade, invest, and build a successful crypto portfolio with expert guidance.</p>
+
+    <div class="course-card-container">
+      <div class="course-card">
+        <h3>Trading Basics</h3>
+        <p>Learn the fundamentals of trading, including market analysis, risk management, and strategies.</p>
+        <div class="course-price">R1000</div>
+        <a href="trading-basics.html" class="cta-btn">Start Trading Today</a>
+      </div>
+
+      <div class="course-card">
+        <h3>Investment Strategies</h3>
+        <p>Discover the best investment strategies to build wealth over time and navigate financial markets.</p>
+        <div class="course-price">R1000</div>
+        <a href="investment-strategies.html" class="cta-btn">Learn Investment Strategies</a>
+      </div>
+
+      <div class="course-card">
+        <h3>Building a Crypto Portfolio</h3>
+        <p>Learn how to diversify and manage your crypto portfolio effectively for long-term growth.</p>
+        <div class="course-price">R1000</div>
+        <a href="building-a-crypto-portfolio.html" class="cta-btn">Build Your Crypto Portfolio</a>
+      </div>
+    </div>
+
+    <div class="offer-card">
+      <h3>Get All 3 Courses for Just R1500!</h3>
+      <p>Take advantage of our special offer and get all 3 courses at a discounted price.</p>
+      <a href="courses.html#all-courses" class="cta-btn">Start Learning Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://facebook.com/empireinvestment" target="_blank">Facebook</a>
+      <a href="https://twitter.com/empireinvestment" target="_blank">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- Candlestick Animation Script -->
+  <script>
+    const canvas = document.getElementById('candlestick-bg');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let candles = [];
+
+    function createCandle() {
+      const x = Math.random() * canvas.width;
+      const height = 20 + Math.random() * 80;
+      const width = 4;
+      const color = Math.random() > 0.5 ? '#00ff00' : '#ff0000';
+      const speed = 0.5 + Math.random();
+      candles.push({ x, y: canvas.height + height, height, width, color, speed });
+    }
+
+    function animateCandles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      candles.forEach((c, i) => {
+        c.y -= c.speed;
+        ctx.fillStyle = c.color;
+        ctx.fillRect(c.x, c.y, c.width, -c.height);
+        if (c.y + c.height < 0) {
+          candles.splice(i, 1);
+        }
+      });
+      if (candles.length < 100) createCandle();
+
+      requestAnimationFrame(animateCandles);
+    }
+
+    animateCandles();
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
+
